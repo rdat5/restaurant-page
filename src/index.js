@@ -1,3 +1,5 @@
+import './style.css';
+
 const contElem = document.querySelector('.content');
 
 function component()
