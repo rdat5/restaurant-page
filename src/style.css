@@ -1,5 +1,53 @@
-.content p
+*
 {
-    color: red;
-    background: url('./valdemaras-d-kixZ0TUROkc-unsplash.jpg');
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #e4e4e4;
+    padding: 5px;
+    height: 100vh;
+    margin: 0;
+
+    font-size: 1.125rem;
+}
+
+.content
+{
+    background-color: white;
+    height: calc(100vh - 10px);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.33);
+    gap: 1px;
+
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.content > *
+{
+    padding: 1rem;
+    text-align: center;
+}
+
+.page-header
+{
+    background-color: #ffcdd2;
+}
+
+.main
+{
+    background-color: #dcedc8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main p
+{
+    width: 75ch;
+}
+
+.page-footer
+{
+    background-color: #ffecb3;
 }
