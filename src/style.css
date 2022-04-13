@@ -21,7 +21,7 @@ body
     gap: 1px;
 
     display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: min-content min-content 1fr min-content;
 }
 
 .content > *
@@ -33,6 +33,11 @@ body
 .page-header
 {
     background-color: #ffcdd2;
+}
+
+.page-nav
+{
+    background-color: #bbdefb;
 }
 
 .main

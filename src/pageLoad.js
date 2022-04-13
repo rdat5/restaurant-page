@@ -27,6 +27,26 @@ function initialPageSetup()
     headerElem.appendChild(newComponent('h1', null, "Something Restaurant"));
     contentWrapper.appendChild(headerElem);
 
+    // Navbar
+    const navElem = newComponent('div', 'page-nav', null);
+
+    const homeTab = document.createElement('button');
+    homeTab.id = "home-tab";
+    homeTab.textContent = "Home";
+    navElem.appendChild(homeTab);
+
+    const menuTab = document.createElement('button');
+    menuTab.id = "menu-tab";
+    menuTab.textContent = "Menu";
+    navElem.appendChild(menuTab);
+
+    const contactTab = document.createElement('button');
+    contactTab.id = "contact-tab";
+    contactTab.textContent = "Contact Us";
+    navElem.appendChild(contactTab);
+
+    contentWrapper.appendChild(navElem);
+
     // Main
     const MainElem = newComponent('div', 'main', null);
     MainElem.appendChild(newComponent('h2', null, 'Welcome to Something Restaurant!'));
