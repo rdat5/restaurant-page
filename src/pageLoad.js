@@ -20,6 +20,22 @@ function newComponent(elemType, nameOfClass, text)
     return element;
 }
 
+function onNavBarClick(buttonClicked)
+{
+    switch (buttonClicked)
+    {
+        case "home":
+            console.log("You clicked home!");
+            break;
+        case "menu":
+            console.log("You clicked Menu!");
+            break;
+        case "contact":
+            console.log("You wanted to contact us!");
+            break;
+    }
+}
+
 function initialPageSetup()
 {
     // Header
@@ -33,20 +49,27 @@ function initialPageSetup()
     const homeTab = document.createElement('button');
     homeTab.id = "home-tab";
     homeTab.textContent = "Home";
+    homeTab.addEventListener("click", () => {onNavBarClick("home")});
+
     navElem.appendChild(homeTab);
 
     const menuTab = document.createElement('button');
     menuTab.id = "menu-tab";
     menuTab.textContent = "Menu";
+    menuTab.addEventListener("click", () => {onNavBarClick("menu")});
+
     navElem.appendChild(menuTab);
 
     const contactTab = document.createElement('button');
     contactTab.id = "contact-tab";
     contactTab.textContent = "Contact Us";
+    contactTab.addEventListener("click", () => {onNavBarClick("contact")});
+
     navElem.appendChild(contactTab);
 
     contentWrapper.appendChild(navElem);
 
+    // Home page
     // Main
     const MainElem = newComponent('div', 'main', null);
     MainElem.appendChild(newComponent('h2', null, 'Welcome to Something Restaurant!'));
