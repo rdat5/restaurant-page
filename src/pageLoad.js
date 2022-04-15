@@ -2,13 +2,16 @@ import './style.css';
 import { homeSetup } from './home';
 
 const contentWrapper = document.querySelector(".content");
+const MainElem = document.createElement('div');
 
 function onNavBarClick(buttonClicked)
 {
+    clearSection(MainElem);
     switch (buttonClicked)
     {
         case "home":
             console.log("You clicked home!");
+            homeSetup(MainElem);
             break;
         case "menu":
             console.log("You clicked Menu!");
@@ -16,6 +19,14 @@ function onNavBarClick(buttonClicked)
         case "contact":
             console.log("You wanted to contact us!");
             break;
+    }
+}
+
+function clearSection(elemToClear)
+{
+    while(elemToClear.firstChild)
+    {
+        elemToClear.removeChild(elemToClear.firstChild);
     }
 }
 
@@ -58,7 +69,6 @@ function initialPageSetup()
 
     // Home page
     // Main
-    const MainElem = document.createElement('div');
     MainElem.classList.add('main');
     contentWrapper.appendChild(MainElem);
 
@@ -69,7 +79,7 @@ function initialPageSetup()
     contentWrapper.appendChild(FooterElem);
 
     // Start at home page
-    homeSetup(MainElem);
+    clearSection(MainElem);
 }
 
 export {initialPageSetup};
