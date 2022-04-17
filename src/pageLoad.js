@@ -1,5 +1,6 @@
 import './style.css';
 import { homeSetup } from './home';
+import { menuSetup } from './menu';
 
 const contentWrapper = document.querySelector(".content");
 const MainElem = document.createElement('div');
@@ -15,6 +16,7 @@ function onNavBarClick(buttonClicked)
             break;
         case "menu":
             console.log("You clicked Menu!");
+            menuSetup(MainElem);
             break;
         case "contact":
             console.log("You wanted to contact us!");
@@ -80,7 +82,8 @@ function initialPageSetup()
 
     // Start at home page
     clearSection(MainElem);
-    homeSetup(MainElem);
+    // homeSetup(MainElem);
+    menuSetup(MainElem);
 }
 
 export {initialPageSetup};
