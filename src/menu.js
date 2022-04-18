@@ -1,5 +1,14 @@
 import FoodPath1 from './amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg';
 
+class Food {
+    constructor(name, price, imagepath, desc) {
+        this.name = name;
+        this.price = price;
+        this.imagepath = imagepath;
+        this.desc = desc;
+    }
+}
+
 function newCardElement(name, price, imagepath, desc)
 {
     const card = document.createElement('div');
