@@ -9,28 +9,28 @@ class Food {
     }
 }
 
-function newCardElement(name, price, imagepath, desc)
+function newCardElement(food)
 {
     const card = document.createElement('div');
     card.classList.add('card');
     
     const foodName = document.createElement('h3');
-    foodName.textContent = name;
+    foodName.textContent = food.name;
     card.appendChild(foodName);
     
     // const foodImage = document.createElement("p");
     // foodImage.textContent = "[FOOD]";
     const foodImage = new Image();
-    foodImage.src = imagepath;
+    foodImage.src = food.imagepath;
     foodImage.height = 128;
     card.appendChild(foodImage);
 
     const foodDesc = document.createElement('p');
-    foodDesc.textContent = desc;
+    foodDesc.textContent = food.desc;
     card.appendChild(foodDesc);
     
     const foodPrice = document.createElement('h4');
-    foodPrice.textContent = price;
+    foodPrice.textContent = food.price;
     card.appendChild(foodPrice);
 
     return card;
@@ -44,7 +44,9 @@ function menuSetup(main)
 
     for (let i = 0; i < 6; i++)
     {
-        menuElem.appendChild(newCardElement("Food " + (i + 1), "15.99", FoodPath1, "Something"));
+        const TestFood = new Food("Food" + (i + 1), "12.99", FoodPath1, "Something");
+        // menuElem.appendChild(newCardElement("Food " + (i + 1), "15.99", FoodPath1, "Something"));
+        menuElem.appendChild(newCardElement(TestFood));
     }
 
     // Add menu to main element
