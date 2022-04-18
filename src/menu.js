@@ -18,8 +18,6 @@ function newCardElement(food)
     foodName.textContent = food.name;
     card.appendChild(foodName);
     
-    // const foodImage = document.createElement("p");
-    // foodImage.textContent = "[FOOD]";
     const foodImage = new Image();
     foodImage.src = food.imagepath;
     foodImage.height = 128;
@@ -45,7 +43,6 @@ function menuSetup(main)
     for (let i = 0; i < 6; i++)
     {
         const TestFood = new Food("Food" + (i + 1), "12.99", FoodPath1, "Something");
-        // menuElem.appendChild(newCardElement("Food " + (i + 1), "15.99", FoodPath1, "Something"));
         menuElem.appendChild(newCardElement(TestFood));
     }
 
