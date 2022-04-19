@@ -84,9 +84,7 @@ function initialPageSetup()
 
     // Start at home page
     clearSection(MainElem);
-    // homeSetup(MainElem);
-    // menuSetup(MainElem);
-    contactSetup(MainElem);
+    homeSetup(MainElem);
 }
 
 export {initialPageSetup};
