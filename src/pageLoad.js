@@ -1,6 +1,7 @@
 import './style.css';
 import { homeSetup } from './home';
 import { menuSetup } from './menu';
+import { contactSetup } from './contact';
 
 const contentWrapper = document.querySelector(".content");
 const MainElem = document.createElement('div');
@@ -20,6 +21,7 @@ function onNavBarClick(buttonClicked)
             break;
         case "contact":
             console.log("You wanted to contact us!");
+            contactSetup(MainElem);
             break;
     }
 }
@@ -83,7 +85,8 @@ function initialPageSetup()
     // Start at home page
     clearSection(MainElem);
     // homeSetup(MainElem);
-    menuSetup(MainElem);
+    // menuSetup(MainElem);
+    contactSetup(MainElem);
 }
 
 export {initialPageSetup};
