@@ -1,6 +1,6 @@
 :root {
     --darkestblue: #0E2444;
-    --darkblue: #174189;
+    --darkblue: #112e5f;
     --midblue: #376EC0;
     --lighterblue: #7794DC;
     --lightestblue: #9BACE8;
@@ -67,11 +67,11 @@ body
 }
 .page-nav button:hover
 {
-    filter: brightness(90%);
+    filter: brightness(110%);
 }
 .page-nav button:active
 {
-    filter: brightness(70%);
+    filter: brightness(130%);
 }
 .main
 {
