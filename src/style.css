@@ -1,11 +1,20 @@
+:root {
+    --darkestblue: #0E2444;
+    --darkblue: #174189;
+    --midblue: #376EC0;
+    --lighterblue: #7794DC;
+    --lightestblue: #9BACE8;
+}
+
 *
 {
     box-sizing: border-box;
+    font-family: Helvetica, Tahoma, 'Courier New', Courier, monospace;
 }
 
 body
 {
-    background-color: #e4e4e4;
+    background-color: var(--darkestblue);
     padding: 5px;
     height: 100vh;
     margin: 0;
@@ -15,10 +24,8 @@ body
 
 .content
 {
-    background-color: white;
     height: calc(100vh - 10px);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.33);
-    gap: 1px;
 
     display: grid;
     grid-template-rows: min-content min-content 1fr min-content;
@@ -32,17 +39,40 @@ body
 
 .page-header
 {
-    background-color: #ffcdd2;
+    background-color: var(--darkblue);
+    color: white;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.33);
 }
 
 .page-nav
 {
-    background-color: #bbdefb;
+    background-color: var(--darkblue);
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
 }
-
+.page-nav button
+{
+    font-size: 1.5rem;
+    border: none;
+    padding: 0.5rem;
+    width: 25%;
+    border-top-left-radius: 50vw;
+    border-top-right-radius: 50vw;
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.33);
+    background-color: var(--lighterblue);
+}
+.page-nav button:hover
+{
+    filter: brightness(90%);
+}
+.page-nav button:active
+{
+    filter: brightness(70%);
+}
 .main
 {
-    background-color: #dcedc8;
+    background-color: var(--lighterblue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +83,6 @@ body
 }
 .main .menu-element
 {
-    /* background-color: red; */
     gap: 20px;
     display: grid;
 
@@ -62,7 +91,7 @@ body
 }
 .main .card
 {
-    background-color: rgb(231, 210, 231);
+    background-color: var(--lightestblue);
     font-size: 1rem;
 
     display: flex;
@@ -73,16 +102,19 @@ body
 }
 .main .menu-element .card img
 {
-    border: 2px solid black;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.33);
 }
 .main .menu-element .card p
 {
     width: 60%;
+    max-width: 75ch;
+    min-width: 45ch;
 }
 
 
 .page-footer
 {
-    background-color: #ffecb3;
+    background-color: var(--midblue);
+    color: var(--lightestblue);
 }
